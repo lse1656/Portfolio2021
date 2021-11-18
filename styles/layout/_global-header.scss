@@ -1,0 +1,50 @@
+.global-header {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+
+  &-wrapper {
+    @include flex(space-between);
+    height: 50px;
+  }
+
+  .logo {
+    width: 50px;
+
+    a {
+      display: block;
+    }
+  }
+
+  .menu {
+    @include flex;
+    width: 25px;
+    height: 25px;
+
+    &-wrap {
+      position: relative;
+      width: 20px;
+      height: 14px;
+
+      span {
+        position: absolute;
+        left: 0;
+        display: inline-block;
+        width: 18px;
+        height: 2px;
+        background-color: $font-base;
+
+        &:first {
+          top: 0;
+        }
+
+        &:nth-child(2) {
+          top: 50%;
+        }
+
+        &:last-child {
+          top: 100%;
+        }
+      }
+    }
+  }
+}
