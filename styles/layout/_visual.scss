@@ -1,8 +1,7 @@
 .visual {
   width: 100%;
   height: calc(100vh - 50px);
-  background: url('../../assets/images/visual-background_s.jpg') no-repeat
-    center;
+  background: url('./assets/images/visual-background_s.jpg') no-repeat center;
   background-size: cover;
 
   &-wrapper {
