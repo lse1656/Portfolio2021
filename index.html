@@ -7,11 +7,25 @@
     <link rel="stylesheet" href="./style.css" />
 
     <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="theme-color" content="#ffffff" />
   </head>
@@ -30,174 +44,188 @@
         </div>
       </div>
     </header>
-
-    <section class="visual">
-      <div class="inner">
-        <div class="visual-wrapper">
-          <p class="visual-txt">
-            <strong class="to-right">Webpulisher</strong>
-            <em class="to-right">Portfolio</em>
-          </p>
-        </div>
+    <button class="menu-button" type="button">
+      <span class="ir_so">전체메뉴 보기</span>
+      <div class="menu-button-wrap">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-    </section>
+    </button>
 
-    <section class="about-me">
-      <div class="inner">
-        <div class="about-me-wrapper">
-          <h2 class="section-title">About me</h2>
-          <img src="./assets/images/profile_image.jpg" alt="" />
+    <main>
+      <section class="visual">
+        <div class="inner">
+          <div class="visual-wrapper">
+            <p class="visual-txt">
+              <strong class="to-right">Webpulisher</strong>
+              <em class="to-right">Portfolio</em>
+            </p>
+            <span class="visual-date">2021</span>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="skill">
-      <div class="inner">
-        <div class="skill-wrapper">
-          <h2 class="section-title">What I do</h2>
-          <ul class="skill-list">
-            <li class="skill-item">
-              <h4>HTML</h4>
-              <p>웹표준에 맞게 작성합니다</p>
-            </li>
-            <li class="skill-item">
-              <h4>CSS</h4>
-              <p>
-                flex 같은 기능을 이용하여 레이아웃을 잡으며 @media query를
-                사용하여 반응형 사이트를 만듭니다
-              </p>
-            </li>
-            <li class="skill-item">
-              <h4>Javascript</h4>
-              <p>
-                플러그인 사용뿐만이 아니라 탭메뉴 스크롤 이벤트 등을 하드코딩
-                하여 작성합니다
-              </p>
-            </li>
-            <li class="skill-item">
-              <h4>Sass(SCSS)</h4>
-              <p>
-                mixin, placeholder 등과 같은 기능을 사용하며 component 별로 작게
-                분리하여 재사용성이 용이하게 작성합니다.
-              </p>
-            </li>
-          </ul>
+      <section class="about-me">
+        <div class="inner">
+          <div class="about-me-wrapper">
+            <h2 class="section-title">About me</h2>
+            <img src="./assets/images/profile_image.jpg" alt="" />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="project">
-      <div class="inner">
-        <div class="project-wrapper">
-          <h2 class="section-title">Project</h2>
-          <ol class="project-list">
-            <li class="project-item">
-              <a
-                class="project-img"
-                href="https://lse1656.github.io/gov24_clone/"
-                target="_blank"
-              ></a>
-              <div class="project-infor">
-                <div class="project-title">
-                  <em>01</em>
-                  <h4>정부24</h4>
-                </div>
-                <p class="project-desc sm-hidden">
-                  복잡한 레이아웃의 사이트를 만들 수 있다는 점을 보여드리기 위해
-                  만든 사이트 입니다. 우선 기존의 사이트를 클론 디자인한 이후
-                  코딩하여 완성했습니다. 슬라이드 플러그인 이외에는 모두 하드
-                  코딩하여 진행한 프로젝트 입니다.
+      <section class="skill">
+        <div class="inner">
+          <div class="skill-wrapper">
+            <h2 class="section-title">What I do</h2>
+            <ul class="skill-list">
+              <li class="skill-item to-right">
+                <h4>HTML</h4>
+                <p>웹표준에 맞게 작성합니다</p>
+              </li>
+              <li class="skill-item to-right">
+                <h4>CSS</h4>
+                <p>
+                  flex 같은 기능을 이용하여 레이아웃을 잡으며 @media query를
+                  사용하여 반응형 사이트를 만듭니다
                 </p>
-                <div class="buttons">
-                  <a class="detail-button" href="#">작업과정 보기</a>
-                  <a
-                    class="link-button"
-                    href="https://lse1656.github.io/gov24_clone/"
-                    target="_blank"
-                    >바로가기</a
-                  >
-                </div>
-              </div>
-            </li>
-            <li class="project-item reverse">
-              <a
-                class="project-img"
-                href="https://lse1656.github.io/NH_Bank_clone/"
-                target="_blank"
-              ></a>
-              <div class="project-infor">
-                <div class="project-title">
-                  <em>02</em>
-                  <h4>NH Bank</h4>
-                </div>
-                <p class="project-desc sm-hidden">
-                  복잡한 레이아웃의 사이트를 만들 수 있다는 점을 보여드리기 위해
-                  만든 사이트 입니다. 우선 기존의 사이트를 클론 디자인한 이후
-                  코딩하여 완성했습니다. 슬라이드 플러그인 이외에는 모두 하드
-                  코딩하여 진행한 프로젝트 입니다.
+              </li>
+              <li class="skill-item to-right">
+                <h4>Javascript</h4>
+                <p>
+                  플러그인 사용뿐만이 아니라 탭메뉴 스크롤 이벤트 등을 하드코딩
+                  하여 작성합니다
                 </p>
-                <div class="buttons">
-                  <a class="detail-button" href="#">작업과정 보기</a>
-                  <a
-                    class="link-button"
-                    href="https://lse1656.github.io/NH_Bank_clone/"
-                    target="_blank"
-                    >바로가기</a
-                  >
-                </div>
-              </div>
-            </li>
-            <li class="project-item">
-              <a
-                class="project-img"
-                href="https://lse1656.github.io/lush/"
-                target="_blank"
-              ></a>
-              <div class="project-infor">
-                <div class="project-title">
-                  <em>03</em>
-                  <h4>Lush</h4>
-                </div>
-                <p class="project-desc sm-hidden">
-                  복잡한 레이아웃의 사이트를 만들 수 있다는 점을 보여드리기 위해
-                  만든 사이트 입니다. 우선 기존의 사이트를 클론 디자인한 이후
-                  코딩하여 완성했습니다. 슬라이드 플러그인 이외에는 모두 하드
-                  코딩하여 진행한 프로젝트 입니다.
+              </li>
+              <li class="skill-item to-right">
+                <h4>Sass(SCSS)</h4>
+                <p>
+                  mixin, placeholder 등과 같은 기능을 사용하며 component 별로
+                  작게 분리하여 재사용성이 용이하게 작성합니다.
                 </p>
-                <div class="buttons">
-                  <a class="detail-button" href="#">작업과정 보기</a>
-                  <a
-                    class="link-button"
-                    href="https://lse1656.github.io/lush/"
-                    target="_blank"
-                    >바로가기</a
-                  >
-                </div>
-              </div>
-            </li>
-          </ol>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="blog">
-      <div class="custom-shape-divider-bottom-1637389548">
-        <svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-            class="shape-fill"
-          ></path>
-        </svg>
-      </div>
-      <div class="inner">
-        <div class="blog-wrapper"></div>
-      </div>
-    </section>
+      <section class="project">
+        <div class="inner">
+          <div class="project-wrapper">
+            <h2 class="section-title">Project</h2>
+            <ol class="project-list">
+              <li class="project-item to-right">
+                <a
+                  class="project-img"
+                  href="https://lse1656.github.io/gov24_clone/"
+                  target="_blank"
+                ></a>
+                <div class="project-infor">
+                  <div class="project-title">
+                    <em>01</em>
+                    <h4>정부24</h4>
+                  </div>
+                  <p class="project-type">Responsive website</p>
+                  <p class="project-desc sm-hidden">
+                    복잡한 레이아웃의 사이트를 만들 수 있다는 점을 보여드리기
+                    위해 만든 사이트 입니다. 우선 기존의 사이트를 클론 디자인한
+                    이후 코딩하여 완성했습니다. 슬라이드 플러그인 이외에는 모두
+                    하드 코딩하여 진행한 프로젝트 입니다.
+                  </p>
+                  <div class="buttons">
+                    <a class="detail-button" href="#">작업과정 보기</a>
+                    <a
+                      class="link-button"
+                      href="https://lse1656.github.io/gov24_clone/"
+                      target="_blank"
+                      >바로가기</a
+                    >
+                  </div>
+                </div>
+              </li>
+              <li class="project-item reverse to-right">
+                <a
+                  class="project-img"
+                  href="https://lse1656.github.io/NH_Bank_clone/"
+                  target="_blank"
+                ></a>
+                <div class="project-infor">
+                  <div class="project-title">
+                    <em>02</em>
+                    <h4>NH Bank</h4>
+                  </div>
+                  <p class="project-type">Clone website</p>
+                  <p class="project-desc sm-hidden">
+                    복잡한 레이아웃의 사이트를 만들 수 있다는 점을 보여드리기
+                    위해 만든 사이트 입니다. 우선 기존의 사이트를 클론 디자인한
+                    이후 코딩하여 완성했습니다. 슬라이드 플러그인 이외에는 모두
+                    하드 코딩하여 진행한 프로젝트 입니다.
+                  </p>
+                  <div class="buttons">
+                    <a class="detail-button" href="#">작업과정 보기</a>
+                    <a
+                      class="link-button"
+                      href="https://lse1656.github.io/NH_Bank_clone/"
+                      target="_blank"
+                      >바로가기</a
+                    >
+                  </div>
+                </div>
+              </li>
+              <li class="project-item to-right">
+                <a
+                  class="project-img"
+                  href="https://lse1656.github.io/lush/"
+                  target="_blank"
+                ></a>
+                <div class="project-infor">
+                  <div class="project-title">
+                    <em>03</em>
+                    <h4>Lush</h4>
+                  </div>
+                  <p class="project-type">Renewal website</p>
+                  <p class="project-desc sm-hidden">
+                    복잡한 레이아웃의 사이트를 만들 수 있다는 점을 보여드리기
+                    위해 만든 사이트 입니다. 우선 기존의 사이트를 클론 디자인한
+                    이후 코딩하여 완성했습니다. 슬라이드 플러그인 이외에는 모두
+                    하드 코딩하여 진행한 프로젝트 입니다.
+                  </p>
+                  <div class="buttons">
+                    <a class="detail-button" href="#">작업과정 보기</a>
+                    <a
+                      class="link-button"
+                      href="https://lse1656.github.io/lush/"
+                      target="_blank"
+                      >바로가기</a
+                    >
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="blog">
+        <div class="custom-shape-divider-bottom-1637389548">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+        <div class="inner">
+          <div class="blog-wrapper"></div>
+        </div>
+      </section>
+    </main>
 
     <section class="global-footer">
       <div class="inner">
@@ -209,13 +237,6 @@
       </div>
     </section>
 
-    <button class="menu-button" type="button">
-      <div class="menu-button-wrap">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </button>
     <aside class="sidebar">
       <ul class="snb-list">
         <li><a href="#">HOME</a></li>

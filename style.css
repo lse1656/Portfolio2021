@@ -139,8 +139,8 @@ img {
 
 .to-right {
   opacity: 0;
-  transform: translate3d(20px, 0, 0);
-  transition: transform 500ms ease, opacity 500ms ease; }
+  transform: translate3d(80px, 0, 0);
+  transition: transform 600ms ease, opacity 600ms ease; }
 
 .show {
   opacity: 1;
@@ -175,7 +175,7 @@ img {
       width: 18px;
       height: 2px;
       background-color: #060809;
-      transition: transform 200ms ease-in-out, opacity 200ms ease-in-out; }
+      transition: transform 300ms ease-in-out, opacity 300ms ease-in-out; }
       .menu-button-wrap span:first {
         top: 0; }
       .menu-button-wrap span:nth-child(2) {
@@ -261,9 +261,12 @@ img {
       transform: rotate(-45deg); }
 
 .visual {
+  position: relative;
+  height: 85vh;
   padding-top: 50px;
-  background: url("./assets/images/visual-background_s.jpg") no-repeat center bottom;
+  background: url("./assets/images/visual-background_s.jpg") no-repeat;
   background-attachment: fixed;
+  background-position: center 70%;
   background-size: cover; }
   .visual-wrapper {
     display: flex;
@@ -272,6 +275,7 @@ img {
     width: 100%;
     height: 85vh; }
   .visual-txt {
+    position: relative;
     margin-top: -2em;
     font-size: 13vw; }
     .visual-txt strong {
@@ -287,6 +291,36 @@ img {
       text-shadow: -1px -1px 0 #060809, 1px -1px 0 #060809, -1px 1px 0 #060809, 1px 1px 0 #060809; }
       .visual-txt em.to-right {
         transition-delay: 1000ms; }
+    .visual-txt::before {
+      position: absolute;
+      top: -0.2em;
+      left: -0.2em;
+      width: 10vw;
+      height: 10vw;
+      border: 2px solid #060809;
+      content: '';
+      animation: rotate-animation linear 20s infinite alternate forwards; }
+
+@keyframes rotate-animation {
+  from {
+    transform: rotate(45deg); }
+  to {
+    transform: rotate(720deg); } }
+  .visual-date {
+    position: absolute;
+    right: 0;
+    bottom: 70px;
+    font-size: 14px;
+    transform: rotate(90deg); }
+    .visual-date:after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      bottom: 0;
+      width: 40px;
+      height: 1px;
+      background-color: #060809;
+      content: ''; }
   @media screen and (min-width: 375px) {
     .visual-txt {
       font-size: 49px; } }
@@ -309,7 +343,9 @@ img {
       text-align: left; } }
 
 .skill {
+  width: 100%;
   padding: 30px 0 40px;
+  overflow: hidden;
   background-color: #f2f4f6; }
   .skill .section-title {
     margin-bottom: 25px; }
@@ -327,7 +363,7 @@ img {
       font-size: 14px; }
       .skill-item h4::after {
         position: absolute;
-        bottom: 0;
+        bottom: 1px;
         left: 0;
         z-index: -10;
         width: 100%;
@@ -341,7 +377,8 @@ img {
       word-break: keep-all; }
   @media screen and (min-width: 425px) {
     .skill-item {
-      flex-direction: column; }
+      flex-direction: column;
+      padding: 15px 40px; }
       .skill-item h4 {
         margin-bottom: 10px; }
       .skill-item p {
@@ -378,7 +415,9 @@ img {
           font-size: 15px; } }
 
 .project {
-  padding: 30px 0; }
+  width: 100%;
+  padding: 30px 0;
+  overflow: hidden; }
   .project .section-title {
     position: relative;
     padding: 5px 0;
@@ -414,25 +453,37 @@ img {
     .project-item:last-child .project-img {
       background: #ffcad4 url("./assets/images/project_lush.png") no-repeat center 80%;
       background-size: 60vw; }
-    .project-item .project-title {
+    .project-item .project-infor {
       display: flex;
       align-items: center;
-      justify-content: center;
-      margin-bottom: 13px; }
-      .project-item .project-title em {
-        display: none;
-        margin-top: -5px;
-        margin-right: 5px;
-        font-size: 16px; }
-      .project-item .project-title h4 {
-        font-size: 24px;
-        font-weight: 500; }
-    .project-item .buttons {
-      font-size: 12px; }
-      .project-item .buttons .detail-button {
-        display: inline-block;
-        margin-right: 5px;
+      flex-direction: column;
+      justify-content: center; }
+      .project-item .project-infor .project-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: -2px; }
+        .project-item .project-infor .project-title em {
+          margin-top: -5px;
+          margin-right: 5px;
+          font-size: 16px; }
+        .project-item .project-infor .project-title h4 {
+          font-size: 24px;
+          font-weight: 500; }
+      .project-item .project-infor .project-type {
+        margin-bottom: 5px;
+        color: #999; }
+      .project-item .project-infor .buttons a {
+        padding: 0.2em 0.5em;
+        font-size: 12px;
+        border: 1px solid #060809;
         border-radius: 30px; }
+        .project-item .project-infor .buttons a:active, .project-item .project-infor .buttons a:hover {
+          color: #fff;
+          background-color: #000; }
+      .project-item .project-infor .buttons .detail-button {
+        display: inline-block;
+        margin-right: 5px; }
   @media screen and (min-width: 768px) {
     .project-item {
       position: relative;
@@ -501,13 +552,12 @@ img {
   top: 0;
   right: 0;
   z-index: 50;
-  display: none;
   width: 80vw;
   height: 100vh;
   padding: 120px 0 0 40px;
   background-color: #fff;
   opacity: 0;
-  transform: translateX(30px);
+  transform: translateX(80vw);
   transition: opacity 300ms ease-in-out, transform 300ms ease-in-out; }
   .sidebar .snb-list {
     font-size: 19px; }
