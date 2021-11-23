@@ -24,7 +24,7 @@ overlay.addEventListener('click', () => {
   overlay.classList.remove('active');
 });
 
-//scroll event
+//scroll event : skill-item
 const skillItem = document.querySelectorAll('.skill-item');
 
 function showValue() {
@@ -42,4 +42,24 @@ function showValue() {
 
 window.addEventListener('scroll', () => {
   showValue();
+});
+
+//scroll event : project-item
+const projectItem = document.querySelectorAll('.project-item');
+
+function showValue2() {
+  let innerHeight = window.innerHeight;
+
+  projectItem.forEach((element) => {
+    let clientRect = element.getBoundingClientRect();
+    if (clientRect.y < innerHeight * 0.9) {
+      element.classList.add('show');
+    } else {
+      element.classList.remove('show');
+    }
+  });
+}
+
+window.addEventListener('scroll', () => {
+  showValue2();
 });
