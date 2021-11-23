@@ -41,10 +41,19 @@
               />
             </a>
           </h1>
+          <nav class="gnb lg-only">
+            <ul class="gnb-list">
+              <li class="gnb-item"><a href="#">HOME</a></li>
+              <li class="gnb-item"><a href="#">ABOUT ME</a></li>
+              <li class="gnb-item"><a href="#">SKILL</a></li>
+              <li class="gnb-item"><a href="#">PROJECT</a></li>
+              <li class="gnb-item"><a href="#">BLOG</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </header>
-    <button class="menu-button" type="button">
+    <button class="menu-button lg-hidden" type="button">
       <span class="ir_so">전체메뉴 보기</span>
       <div class="menu-button-wrap">
         <span></span>
@@ -54,7 +63,7 @@
     </button>
 
     <main>
-      <section class="visual">
+      <section id="main" class="visual">
         <div class="inner">
           <div class="visual-wrapper">
             <p class="visual-txt">
@@ -66,7 +75,7 @@
         </div>
       </section>
 
-      <section class="about-me">
+      <section id="about-me" class="about-me">
         <div class="inner">
           <div class="about-me-wrapper">
             <h2 class="section-title">About me</h2>
@@ -75,7 +84,7 @@
         </div>
       </section>
 
-      <section class="skill">
+      <section id="skill" class="skill">
         <div class="inner">
           <div class="skill-wrapper">
             <h2 class="section-title">What I do</h2>
@@ -110,7 +119,7 @@
         </div>
       </section>
 
-      <section class="project">
+      <section id="project" class="project">
         <div class="inner">
           <div class="project-wrapper">
             <h2 class="section-title">Project</h2>
@@ -123,10 +132,10 @@
                 ></a>
                 <div class="project-infor">
                   <div class="project-title">
-                    <em>01</em>
+                    <em class="sm-only">01</em>
                     <h4>정부24</h4>
                   </div>
-                  <p class="project-type">Responsive website</p>
+                  <p class="project-type sm-only">Responsive website</p>
                   <p class="project-desc sm-hidden">
                     복잡한 레이아웃의 사이트를 만들 수 있다는 점을 보여드리기
                     위해 만든 사이트 입니다. 우선 기존의 사이트를 클론 디자인한
@@ -144,7 +153,7 @@
                   </div>
                 </div>
               </li>
-              <li class="project-item reverse to-right">
+              <li class="project-item reverse to-left">
                 <a
                   class="project-img"
                   href="https://lse1656.github.io/NH_Bank_clone/"
@@ -152,10 +161,10 @@
                 ></a>
                 <div class="project-infor">
                   <div class="project-title">
-                    <em>02</em>
+                    <em class="sm-only">02</em>
                     <h4>NH Bank</h4>
                   </div>
-                  <p class="project-type">Clone website</p>
+                  <p class="project-type sm-only">Clone website</p>
                   <p class="project-desc sm-hidden">
                     복잡한 레이아웃의 사이트를 만들 수 있다는 점을 보여드리기
                     위해 만든 사이트 입니다. 우선 기존의 사이트를 클론 디자인한
@@ -181,10 +190,10 @@
                 ></a>
                 <div class="project-infor">
                   <div class="project-title">
-                    <em>03</em>
+                    <em class="sm-only">03</em>
                     <h4>Lush</h4>
                   </div>
-                  <p class="project-type">Renewal website</p>
+                  <p class="project-type sm-only">Renewal website</p>
                   <p class="project-desc sm-hidden">
                     복잡한 레이아웃의 사이트를 만들 수 있다는 점을 보여드리기
                     위해 만든 사이트 입니다. 우선 기존의 사이트를 클론 디자인한
@@ -207,7 +216,7 @@
         </div>
       </section>
 
-      <section class="blog">
+      <!-- <section class="blog">
         <div class="custom-shape-divider-bottom-1637389548">
           <svg
             data-name="Layer 1"
@@ -224,7 +233,7 @@
         <div class="inner">
           <div class="blog-wrapper"></div>
         </div>
-      </section>
+      </section> -->
     </main>
 
     <section class="global-footer">
@@ -239,11 +248,11 @@
 
     <aside class="sidebar">
       <ul class="snb-list">
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">ABOUT ME</a></li>
-        <li><a href="#">SKILL</a></li>
-        <li><a href="#">PROJECT</a></li>
-        <li><a href="#">BLOG</a></li>
+        <li><a href="#main">HOME</a></li>
+        <li><a href="#about-me">ABOUT ME</a></li>
+        <li><a href="#skill">SKILL</a></li>
+        <li><a href="#project">PROJECT</a></li>
+        <!-- <li><a href="#">BLOG</a></li> -->
       </ul>
     </aside>
 
