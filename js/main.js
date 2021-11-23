@@ -1,4 +1,3 @@
-//로드된 후 visual-txt 나타나기
 const visualTxt1 = document.querySelector('.visual-txt strong');
 const visualTxt2 = document.querySelector('.visual-txt em');
 
@@ -10,18 +9,33 @@ window.addEventListener('load', () => {
 //menu-button 클릭하면 sidebar 나타나기
 const menuBtn = document.querySelector('.menu-button');
 const sidebar = document.querySelector('.sidebar');
+const sidebarItem = document.querySelectorAll('.sidebar .snb-list li a');
 const overlay = document.querySelector('.overlay');
 
-menuBtn.addEventListener('click', () => {
+function toggleClass() {
   menuBtn.classList.toggle('active');
   sidebar.classList.toggle('active');
   overlay.classList.toggle('active');
-});
+}
 
-overlay.addEventListener('click', () => {
+function removeClass() {
   menuBtn.classList.remove('active');
   sidebar.classList.remove('active');
   overlay.classList.remove('active');
+}
+
+menuBtn.addEventListener('click', () => {
+  toggleClass();
+});
+
+sidebarItem.forEach((element) => {
+  element.addEventListener('click', () => {
+    removeClass();
+  });
+});
+
+overlay.addEventListener('click', () => {
+  removeClass();
 });
 
 //scroll event : skill-item
@@ -32,7 +46,7 @@ function showValue() {
 
   skillItem.forEach((element) => {
     let clientRect = element.getBoundingClientRect();
-    if (clientRect.y < innerHeight * 0.9) {
+    if (clientRect.y < innerHeight * 0.8) {
       element.classList.add('show');
     } else {
       element.classList.remove('show');
@@ -52,7 +66,7 @@ function showValue2() {
 
   projectItem.forEach((element) => {
     let clientRect = element.getBoundingClientRect();
-    if (clientRect.y < innerHeight * 0.9) {
+    if (clientRect.y < innerHeight * 0.8) {
       element.classList.add('show');
     } else {
       element.classList.remove('show');
