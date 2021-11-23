@@ -154,6 +154,44 @@ img {
     .section-title {
       font-size: 36px; } }
 
+.menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: fixed;
+  top: 12px;
+  right: 15px;
+  z-index: 100;
+  width: 25px;
+  height: 25px; }
+  .menu-button-wrap {
+    position: relative;
+    width: 20px;
+    height: 14px; }
+    .menu-button-wrap span {
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      width: 18px;
+      height: 2px;
+      background-color: #060809;
+      transition: transform 200ms ease-in-out, opacity 200ms ease-in-out; }
+      .menu-button-wrap span:first {
+        top: 0; }
+      .menu-button-wrap span:nth-child(2) {
+        top: 50%; }
+      .menu-button-wrap span:last-child {
+        top: 100%; }
+  .menu-button.active .menu-button-wrap span:first-child {
+    top: 8px;
+    transform: rotate(45deg); }
+  .menu-button.active .menu-button-wrap span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-3px); }
+  .menu-button.active .menu-button-wrap span:last-child {
+    top: 8px;
+    transform: rotate(-45deg); }
+
 .inner {
   padding: 0 15px; }
   @media screen and (min-width: 768px) {
@@ -224,7 +262,7 @@ img {
 
 .visual {
   padding-top: 50px;
-  background: url("./assets/images/visual-background_s.jpg") no-repeat center;
+  background: url("./assets/images/visual-background_s.jpg") no-repeat center bottom;
   background-attachment: fixed;
   background-size: cover; }
   .visual-wrapper {

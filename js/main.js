@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
   visualTxt2.classList.add('show');
 });
 
-const menuBtn = document.querySelector('.global-header .menu');
+const menuBtn = document.querySelector('.menu-button');
 const sidebar = document.querySelector('.sidebar');
 const overlay = document.querySelector('.overlay');
 
