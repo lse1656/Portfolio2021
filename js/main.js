@@ -38,13 +38,15 @@ overlay.addEventListener('click', () => {
   removeClass();
 });
 
-//scroll event : skill-item
+//scroll event
 const skillItem = document.querySelectorAll('.skill-item');
+const projectImg = document.querySelectorAll('.project-item .project-img');
+const projectInfor = document.querySelectorAll('.project-item .project-infor');
 
-function showValue() {
+function showValue(e) {
   let innerHeight = window.innerHeight;
 
-  skillItem.forEach((element) => {
+  e.forEach((element) => {
     let clientRect = element.getBoundingClientRect();
     if (clientRect.y < innerHeight * 0.8) {
       element.classList.add('show');
@@ -55,25 +57,28 @@ function showValue() {
 }
 
 window.addEventListener('scroll', () => {
-  showValue();
+  showValue(skillItem);
+  showValue(projectInfor);
+  showValue(projectImg);
 });
 
-//scroll event : project-item
-const projectItem = document.querySelectorAll('.project-item');
-
-function showValue2() {
-  let innerHeight = window.innerHeight;
-
-  projectItem.forEach((element) => {
-    let clientRect = element.getBoundingClientRect();
-    if (clientRect.y < innerHeight * 0.8) {
-      element.classList.add('show');
-    } else {
-      element.classList.remove('show');
-    }
-  });
-}
+const bannerTxt = document.querySelector('.banner p');
 
 window.addEventListener('scroll', () => {
-  showValue2();
+  let clientRect = bannerTxt.getBoundingClientRect();
+  if (clientRect.y < innerHeight * 0.95) {
+    bannerTxt.style.transform = 'translateX(7%)';
+  }
+  if (clientRect.y < innerHeight * 0.6) {
+    bannerTxt.style.transform = 'translateX(0)';
+  }
+  if (clientRect.y < innerHeight * 0.4) {
+    bannerTxt.style.transform = 'translateX(-3%)';
+  }
+  if (clientRect.y < innerHeight * 0.3) {
+    bannerTxt.style.transform = 'translateX(-6%)';
+  }
+  if (clientRect.y < innerHeight * 0.1) {
+    bannerTxt.style.transform = 'translateX(-10%)';
+  }
 });
