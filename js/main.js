@@ -66,19 +66,55 @@ const bannerTxt = document.querySelector('.banner p');
 
 window.addEventListener('scroll', () => {
   let clientRect = bannerTxt.getBoundingClientRect();
-  if (clientRect.y < innerHeight * 0.95) {
-    bannerTxt.style.transform = 'translateX(7%)';
+  if (clientRect.y < innerHeight * 0.9) {
+    bannerTxt.style.transform = 'translateX(5%)';
   }
-  if (clientRect.y < innerHeight * 0.6) {
+  if (clientRect.y < innerHeight * 0.8) {
     bannerTxt.style.transform = 'translateX(0)';
   }
-  if (clientRect.y < innerHeight * 0.4) {
-    bannerTxt.style.transform = 'translateX(-3%)';
+  if (clientRect.y < innerHeight * 0.7) {
+    bannerTxt.style.transform = 'translateX(-5%)';
   }
-  if (clientRect.y < innerHeight * 0.3) {
-    bannerTxt.style.transform = 'translateX(-6%)';
-  }
-  if (clientRect.y < innerHeight * 0.1) {
+  if (clientRect.y < innerHeight * 0.6) {
     bannerTxt.style.transform = 'translateX(-10%)';
   }
+  if (clientRect.y < innerHeight * 0.4) {
+    bannerTxt.style.transform = 'translateX(-15%)';
+  }
+  if (clientRect.y < innerHeight * 0.3) {
+    bannerTxt.style.transform = 'translateX(-20%)';
+  }
+  if (clientRect.y < innerHeight * 0.1) {
+    bannerTxt.style.transform = 'translateX(-25%)';
+  }
+});
+
+const detailBtn = document.querySelectorAll('.project-item .detail-button');
+const detailPopup = document.querySelectorAll('.popup');
+const detailCloseBtn = document.querySelectorAll('.popup .close-button');
+let activePopup;
+
+detailBtn.forEach((element) => {
+  element.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    activePopup = element.getAttribute('href');
+    document.querySelector(activePopup).classList.add('active');
+    overlay.classList.add('active');
+  });
+});
+
+detailCloseBtn.forEach((element) => {
+  element.addEventListener('click', () => {
+    overlay.classList.remove('active');
+    detailPopup.forEach((element) => {
+      element.classList.remove('active');
+    });
+  });
+});
+
+overlay.addEventListener('click', () => {
+  detailPopup.forEach((element) => {
+    element.classList.remove('active');
+  });
 });
