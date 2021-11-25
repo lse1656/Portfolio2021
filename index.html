@@ -125,7 +125,7 @@
                 <h4>Javascript</h4>
                 <p>
                   ES6를 이해하며 플러그인 사용뿐만이 아니라 탭메뉴, 스크롤
-                  이벤트 등을 바닐라 자바스크립트를 통하여 작성합니다
+                  이벤트 등을 바닐라 자바스크립트로 작성합니다
                 </p>
               </li>
               <li class="skill-item to-right">
@@ -165,7 +165,7 @@
                     하드 코딩하여 진행한 프로젝트 입니다.
                   </p>
                   <div class="buttons">
-                    <a class="detail-button" href="#">작업과정 보기</a>
+                    <a class="detail-button" href="#project01">작업과정 보기</a>
                     <a
                       class="link-button"
                       href="https://lse1656.github.io/gov24_clone/"
@@ -195,7 +195,7 @@
                     하드 코딩하여 진행한 프로젝트 입니다.
                   </p>
                   <div class="buttons">
-                    <a class="detail-button" href="#">작업과정 보기</a>
+                    <a class="detail-button" href="#project02">작업과정 보기</a>
                     <a
                       class="link-button"
                       href="https://lse1656.github.io/NH_Bank_clone/"
@@ -223,7 +223,7 @@
                     작성한 반응형 웹사이트 입니다.
                   </p>
                   <div class="buttons">
-                    <a class="detail-button" href="#">작업과정 보기</a>
+                    <a class="detail-button" href="#project03">작업과정 보기</a>
                   </div>
                 </div>
               </li>
@@ -231,25 +231,6 @@
           </div>
         </div>
       </section>
-
-      <!-- <section class="blog">
-        <div class="custom-shape-divider-bottom-1637389548">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-              class="shape-fill"
-            ></path>
-          </svg>
-        </div>
-        <div class="inner">
-          <div class="blog-wrapper"></div>
-        </div>
-      </section> -->
     </main>
 
     <section class="global-footer">
@@ -274,26 +255,32 @@
     <div class="overlay"></div>
 
     <!-- 팝업창 -->
-    <aside class="popup-detail project01">
-      <div class="detail-title">
-        <p>Responsive Clone Website</p>
-        <h2>정부24</h2>
-      </div>
+    <aside id="project01" class="popup project01">
+      <header class="popup-header">
+        <div class="project-img">
+          <img src="./assets/images/project_gov24.png" alt="" />
+        </div>
+        <h2 class="detail-title"><em>Responsive Clone Website</em> 정부24</h2>
+      </header>
 
-      <dl class="detail-list">
-        <div class="detail-item">
-          <dt>PARTICIPATION</dt>
-          <dd>Publishing 100%</dd>
+      <div class="popup-infor">
+        <div class="inner">
+          <dl class="detail-list">
+            <div class="detail-item">
+              <dt>PARTICIPATION</dt>
+              <dd>Publishing 100%</dd>
+            </div>
+            <div class="detail-item">
+              <dt>SKILL</dt>
+              <dd>HTML / CSS / JS</dd>
+            </div>
+            <div class="detail-item">
+              <dt>DURATION</dt>
+              <dd>Publishing 8 Days</dd>
+            </div>
+          </dl>
         </div>
-        <div class="detail-item">
-          <dt>SKILL</dt>
-          <dd>HTML / CSS / JS / Figma</dd>
-        </div>
-        <div class="detail-item">
-          <dt>DURATION</dt>
-          <dd>Publishing 7 Days</dd>
-        </div>
-      </dl>
+      </div>
 
       <div class="site-img">
         <figure class="design">
@@ -306,7 +293,88 @@
         </figure>
       </div>
 
-      <p>안ㄴㅇㄴㅁ오나몽뫄ㅗ아노ㅓ</p>
+      <button class="close-button" type="button">
+        <span class="ir_so">창 닫기</span>
+      </button>
+    </aside>
+    <aside id="project02" class="popup project02">
+      <header class="popup-header">
+        <div class="project-img">
+          <img src="./assets/images/project_nh.png" alt="" />
+        </div>
+        <h2 class="detail-title"><em>Clone Website</em>NH Bank</h2>
+      </header>
+
+      <div class="popup-infor">
+        <div class="inner">
+          <dl class="detail-list">
+            <div class="detail-item">
+              <dt>PARTICIPATION</dt>
+              <dd>Publishing 100%</dd>
+            </div>
+            <div class="detail-item">
+              <dt>SKILL</dt>
+              <dd>HTML / CSS / JS</dd>
+            </div>
+            <div class="detail-item">
+              <dt>DURATION</dt>
+              <dd>Publishing 2 Days</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="site-img">
+        <figure class="design">
+          <figcaption>디자인 시안</figcaption>
+          <img src="./assets/images/nh_design.jpg" alt="디자인 시안" />
+        </figure>
+        <figure class="complete">
+          <figcaption>완성 사이트</figcaption>
+          <img src="./assets/images/nh_complete.png" alt="완성 사이트" />
+        </figure>
+      </div>
+
+      <button class="close-button" type="button">
+        <span class="ir_so">창 닫기</span>
+      </button>
+    </aside>
+    <aside id="project03" class="popup project03">
+      <header class="popup-header">
+        <div class="project-img">
+          <img src="./assets/images/project_portfolio.png" alt="" />
+        </div>
+        <h2 class="detail-title"><em>Design Website</em>Portfolio</h2>
+      </header>
+
+      <div class="popup-infor">
+        <div class="inner">
+          <dl class="detail-list">
+            <div class="detail-item">
+              <dt>PARTICIPATION</dt>
+              <dd>Design 100% Publishing 100%</dd>
+            </div>
+            <div class="detail-item">
+              <dt>SKILL</dt>
+              <dd>HTML / CSS / JS / Sass</dd>
+            </div>
+            <div class="detail-item">
+              <dt>DURATION</dt>
+              <dd>
+                Design 1 Days<br />
+                Publishing 3 Days
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="site-img">
+        <figure class="design">
+          <figcaption>디자인 시안</figcaption>
+          <img src="./assets/images/portfolio_design.jpg" alt="디자인 시안" />
+        </figure>
+      </div>
 
       <button class="close-button" type="button">
         <span class="ir_so">창 닫기</span>
