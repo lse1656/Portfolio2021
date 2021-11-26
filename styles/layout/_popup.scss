@@ -8,11 +8,14 @@
   display: none;
   width: 100vw;
   height: 100%;
+  padding-bottom: 120px;
   overflow-y: auto;
   overscroll-behavior: contain;
   background-color: #fff;
 
   .popup-header {
+    position: relative;
+
     .project-img {
       @include flex;
       height: 70vw;
@@ -25,7 +28,7 @@
     }
 
     .detail-title {
-      margin-top: -7.5vw;
+      margin-top: -6.5vw;
       margin-bottom: 19vw;
       font-size: 28px;
       line-height: 1;
@@ -37,32 +40,42 @@
         color: $font-para;
       }
     }
+
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+      background: url('./assets/images/close.png') no-repeat center;
+      background-size: contain;
+    }
   }
 
   .popup-infor {
+    @include flex;
     padding: 50px 0;
     margin-bottom: 45px;
     background-color: #d5dbe5;
 
     .detail-item {
       @include flex(flex-start, flex-start);
-      width: 100%;
 
       dt {
-        width: 40%;
+        width: 42vw;
         font-size: 13px;
       }
 
       dd {
-        width: 60%;
         font-size: 12px;
         color: $font-para;
       }
     }
   }
 
-  .site-img {
+  .project-show {
     @include column-flex;
+    margin-bottom: 30px;
 
     figure {
       width: 85%;
@@ -71,20 +84,20 @@
 
     figcaption {
       margin-bottom: 3px;
-      font-size: 16px;
+      font-size: 24px;
       font-weight: 500;
       text-align: center;
     }
   }
 
-  .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 30px;
-    height: 30px;
-    background: url('./assets/images/close.png') no-repeat center;
-    background-size: contain;
+  .desc-list {
+    padding: 0 15px;
+    font-size: 14px;
+    color: $font-para;
+
+    li {
+      margin-bottom: 0.25em;
+    }
   }
 
   &.active {
@@ -110,6 +123,10 @@
     .popup-infor {
       background-color: #f4f4f4;
     }
+
+    .project-show {
+      justify-content: center;
+    }
   }
 
   @media screen and (min-width: $md-breakpoint) {
@@ -119,7 +136,7 @@
 
     .popup-header {
       .detail-title {
-        margin-top: -3.5vw;
+        margin: -3.5vw 0 150px 8vw;
         font-size: 36px;
 
         em {
@@ -131,6 +148,7 @@
     .popup-infor {
       .detail-item {
         dt {
+          width: 25vw;
           font-size: 16px;
         }
 
@@ -139,17 +157,43 @@
         }
       }
     }
-  }
 
-  @media screen and (min-width: $lg-breakpoint) {
-    .site-img {
+    .project-show {
       align-items: flex-start;
       flex-direction: row;
       justify-content: space-between;
+      padding: 0 15px;
 
       figure {
         width: 49%;
       }
+
+      figcaption {
+        font-size: 28px;
+      }
+    }
+
+    .desc-list {
+      padding: 0 30px;
+      font-size: 16px;
+      color: $font-para;
+      text-align: center;
+    }
+
+    &.project03 {
+      .project-img img {
+        max-width: 210px;
+      }
+    }
+  }
+
+  @media screen and (min-width: $lg-breakpoint) {
+    .popup-infor {
+      padding: 80px 0;
+    }
+
+    .project-show {
+      padding: 0 120px;
     }
   }
 }
