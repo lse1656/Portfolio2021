@@ -236,12 +236,13 @@ img {
       position: relative; }
       .global-header .gnb .gnb-item a::after {
         position: absolute;
-        bottom: 0;
+        top: 50%;
+        transform: translateY(-50%);
         left: 0;
         z-index: -10;
         width: 100%;
-        height: 10px;
-        background-color: #d6dce2;
+        height: 2px;
+        background-color: #375e9e;
         content: '';
         transform: scaleX(0);
         transition: transform 300ms ease-in-out; }
@@ -562,6 +563,7 @@ img {
       .project-item .project-infor .buttons a {
         padding: 0.2em 0.5em 0.25em;
         font-size: 12px;
+        text-align: center;
         background-color: #fff;
         border: 1px solid #060809;
         border-radius: 30px; }
@@ -737,65 +739,76 @@ img {
   display: none;
   width: 100vw;
   height: 100%;
+  padding-bottom: 120px;
   overflow-y: auto;
   overscroll-behavior: contain;
   background-color: #fff; }
-  .popup .popup-header .project-img {
+  .popup .popup-header {
+    position: relative; }
+    .popup .popup-header .project-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 70vw;
+      max-height: 350px; }
+      .popup .popup-header .project-img img {
+        width: 40vw;
+        max-width: 350px; }
+    .popup .popup-header .detail-title {
+      margin-top: -6.5vw;
+      margin-bottom: 19vw;
+      font-size: 28px;
+      line-height: 1; }
+      .popup .popup-header .detail-title em {
+        display: block;
+        font-size: 12px;
+        font-weight: 400;
+        color: #555; }
+    .popup .popup-header .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+      background: url("./assets/images/close.png") no-repeat center;
+      background-size: contain; }
+  .popup .popup-infor {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70vw;
-    max-height: 350px; }
-    .popup .popup-header .project-img img {
-      width: 40vw;
-      max-width: 350px; }
-  .popup .popup-header .detail-title {
-    margin-top: -7.5vw;
-    margin-bottom: 19vw;
-    font-size: 28px;
-    line-height: 1; }
-    .popup .popup-header .detail-title em {
-      display: block;
-      font-size: 12px;
-      font-weight: 400;
-      color: #555; }
-  .popup .popup-infor {
     padding: 50px 0;
     margin-bottom: 45px;
     background-color: #d5dbe5; }
     .popup .popup-infor .detail-item {
       display: flex;
       align-items: flex-start;
-      justify-content: flex-start;
-      width: 100%; }
+      justify-content: flex-start; }
       .popup .popup-infor .detail-item dt {
-        width: 40%;
+        width: 42vw;
         font-size: 13px; }
       .popup .popup-infor .detail-item dd {
-        width: 60%;
         font-size: 12px;
         color: #555; }
-  .popup .site-img {
+  .popup .project-show {
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center; }
-    .popup .site-img figure {
+    justify-content: center;
+    margin-bottom: 30px; }
+    .popup .project-show figure {
       width: 85%;
       margin-bottom: 5px; }
-    .popup .site-img figcaption {
+    .popup .project-show figcaption {
       margin-bottom: 3px;
-      font-size: 16px;
+      font-size: 24px;
       font-weight: 500;
       text-align: center; }
-  .popup .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 30px;
-    height: 30px;
-    background: url("./assets/images/close.png") no-repeat center;
-    background-size: contain; }
+  .popup .desc-list {
+    padding: 0 15px;
+    font-size: 14px;
+    color: #555; }
+    .popup .desc-list li {
+      margin-bottom: 0.25em; }
   .popup.active {
     display: block; }
   .popup.project01 .project-img,
@@ -807,26 +820,43 @@ img {
   .popup.project03 .project-img,
   .popup.project03 .popup-infor {
     background-color: #f4f4f4; }
+  .popup.project03 .project-show {
+    justify-content: center; }
   @media screen and (min-width: 768px) {
     .popup {
       top: initial;
       bottom: 0;
       height: 80%; }
       .popup .popup-header .detail-title {
-        margin-top: -3.5vw;
+        margin: -3.5vw 0 150px 8vw;
         font-size: 36px; }
         .popup .popup-header .detail-title em {
           font-size: 14px; }
       .popup .popup-infor .detail-item dt {
+        width: 25vw;
         font-size: 16px; }
       .popup .popup-infor .detail-item dd {
-        font-size: 15px; } }
+        font-size: 15px; }
+      .popup .project-show {
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 15px; }
+        .popup .project-show figure {
+          width: 49%; }
+        .popup .project-show figcaption {
+          font-size: 28px; }
+      .popup .desc-list {
+        padding: 0 30px;
+        font-size: 16px;
+        color: #555;
+        text-align: center; }
+      .popup.project03 .project-img img {
+        max-width: 210px; } }
   @media screen and (min-width: 1024px) {
-    .popup .site-img {
-      align-items: flex-start;
-      flex-direction: row;
-      justify-content: space-between; }
-      .popup .site-img figure {
-        width: 49%; } }
+    .popup .popup-infor {
+      padding: 80px 0; }
+    .popup .project-show {
+      padding: 0 120px; } }
 
 /*# sourceMappingURL=style.css.map */
