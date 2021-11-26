@@ -1,0 +1,241 @@
+.project {
+  position: relative;
+  width: 100%;
+  padding: 30px 0;
+  overflow: hidden;
+
+  .section-title {
+    position: relative;
+    padding: 5px 0 10px;
+    margin-bottom: 40px;
+
+    &::before,
+    &::after {
+      @include center-x;
+      width: 40px;
+      height: 1px;
+      background-color: $font-base;
+      content: '';
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+  }
+
+  &-item {
+    @include column-flex;
+    margin-bottom: 40px;
+
+    .project-img {
+      width: 100%;
+      height: 63vw;
+      margin-bottom: 13px;
+    }
+
+    &:first-child .project-img {
+      background: #d5dbe5 url('./assets/images/project_gov24.png') no-repeat
+        center 80%;
+      background-size: 60vw;
+    }
+
+    &:nth-child(2) .project-img {
+      background: #d3e8ff url('./assets/images/project_nh.png') no-repeat center
+        80%;
+      background-size: 60vw;
+    }
+
+    &:last-child .project-img {
+      background: #f4f4f4 url('./assets/images/project_portfolio.png') no-repeat
+        center;
+      background-size: 30vw;
+    }
+
+    .project-infor {
+      @include column-flex;
+      position: relative;
+
+      .project-title {
+        @include flex;
+        margin-bottom: 8px;
+
+        em {
+          margin-top: -5px;
+          margin-right: 5px;
+          font-size: 16px;
+        }
+
+        h4 {
+          font-size: 24px;
+          font-weight: 500;
+        }
+      }
+
+      .project-type {
+        @include center;
+        z-index: -10;
+        margin-bottom: 5px;
+        font-size: 26px;
+        color: $font-type;
+        white-space: nowrap;
+        transition: transform 300ms ease-in-out, color 300ms ease-in-out;
+      }
+
+      .buttons {
+        a {
+          padding: 0.2em 0.5em 0.25em;
+          font-size: 12px;
+          text-align: center;
+          background-color: #fff;
+          border: 1px solid $font-base;
+          border-radius: 30px;
+
+          &:active,
+          &:hover {
+            color: #fff;
+            background-color: $primary;
+            border-color: $primary;
+          }
+        }
+
+        .detail-button {
+          display: inline-block;
+          margin-right: 5px;
+        }
+      }
+
+      .to-right,
+      .to-left {
+        transition-delay: 200s;
+      }
+    }
+  }
+
+  @media screen and (min-width: $md-breakpoint) {
+    .section-title {
+      margin-bottom: 60px;
+    }
+
+    &-item {
+      position: relative;
+      align-items: flex-start;
+      margin-bottom: 60px;
+
+      .project-img {
+        width: 45%;
+        height: 42vw;
+        max-width: 500px;
+        max-height: 500px;
+        background-position: center 71%;
+        background-size: 40vw;
+      }
+
+      &:first-child .project-img {
+        background-size: 40vw;
+      }
+
+      &:nth-child(2) .project-img {
+        background-size: 40vw;
+      }
+
+      &:last-child .project-img {
+        background-size: 20vw;
+      }
+
+      .project-infor {
+        @include center-y;
+        left: 35%;
+        align-items: flex-start;
+        width: 420px;
+        padding: 30px 35px 25px 35px;
+        background-color: #fff;
+        box-shadow: 45px 49px 13px -44px rgba(0, 0, 0, 0.1);
+
+        .project-title {
+          justify-content: flex-start;
+          margin-bottom: 20px;
+        }
+
+        .project-desc {
+          width: 350px;
+          margin-bottom: 35px;
+          font-size: 14px;
+          color: $font-para;
+          word-break: break-all;
+        }
+
+        .buttons {
+          a {
+            padding: 0.5em 0.8em;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .reverse {
+      align-items: flex-end;
+
+      .project-infor {
+        right: 35%;
+        left: initial;
+        box-shadow: -45px 49px 13px -44px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  @media screen and (min-width: $lg-breakpoint) {
+    &-item {
+      .project-img {
+        width: 500px;
+        height: 500px;
+      }
+
+      &:first-child .project-img {
+        background-size: 410px;
+      }
+
+      &:nth-child(2) .project-img {
+        background-size: 410px;
+      }
+
+      &:last-child .project-img {
+        background-size: 230px;
+      }
+
+      .project-number {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 48px;
+      }
+
+      .project-infor {
+        width: 534px;
+        height: 300px;
+
+        .project-desc {
+          width: 420px;
+          font-size: 15px;
+        }
+
+        .buttons a {
+          padding: 10px 15px;
+          transition: background-color 300ms ease-in-out,
+            color 300ms ease-in-out;
+        }
+      }
+    }
+
+    .reverse {
+      .project-number {
+        right: initial;
+        left: 0;
+      }
+    }
+  }
+}

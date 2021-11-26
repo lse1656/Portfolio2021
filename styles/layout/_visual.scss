@@ -1,30 +1,130 @@
 .visual {
-  width: 100%;
-  height: calc(100vh - 50px);
-  background: url('./assets/images/visual-background_s.jpg') no-repeat center;
+  $header-height-sm: 50px;
+  $header-height-lg: 80px;
+
+  position: relative;
+  height: 80vh;
+  padding-top: $header-height-sm;
+  background: url('./assets/images/visual-background_s.jpg') no-repeat;
+  background-position: center bottom;
   background-size: cover;
 
   &-wrapper {
     @include flex;
     width: 100%;
-    height: calc(100vh - 50px);
+    height: 85vh;
   }
 
   &-txt {
-    margin-top: -2em;
-    font-size: 2.7rem;
+    position: relative;
+    margin-top: -1.5em;
+    font-size: 13vw;
 
     strong {
       position: relative;
       z-index: 5;
       display: block;
-      margin-bottom: -2rem;
+      margin-bottom: -0.4em;
+      line-height: 0.75em;
+
+      span {
+        font-size: 13.5vw;
+        color: $primary;
+      }
+
+      &.to-right {
+        transition-delay: 500ms;
+      }
     }
 
     em {
+      display: inline-block;
       color: #bec9ce;
       text-shadow: -1px -1px 0 $font-base, 1px -1px 0 $font-base,
         -1px 1px 0 $font-base, 1px 1px 0 $font-base;
+
+      &.to-right {
+        transition-delay: 1000ms;
+      }
+    }
+  }
+
+  &-date {
+    position: absolute;
+    right: 0;
+    bottom: 70px;
+    font-size: 14px;
+    transform: rotate(90deg);
+
+    &:after {
+      @include center-y;
+      bottom: 0;
+      width: 40px;
+      height: 1px;
+      background-color: $font-base;
+      content: '';
+    }
+  }
+
+  .scroll {
+    @include center-x;
+    bottom: 0;
+
+    span {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background: url('./assets/images/heart.png') no-repeat center;
+      background-size: contain;
+    }
+  }
+
+  @media screen and (min-width: 375px) {
+    &-txt {
+      font-size: 49px;
+    }
+  }
+
+  @media screen and (min-width: 425px) {
+    &-txt::before {
+      width: 51px;
+      height: 51px;
+    }
+  }
+
+  @media screen and (min-width: $md-breakpoint) {
+    &-txt {
+      font-size: 9vw;
+
+      strong span {
+        font-size: 9.5vw;
+      }
+    }
+
+    .scroll span {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  @media screen and (min-width: $lg-breakpoint) {
+    height: calc(100vh - #{$header-height-lg});
+    padding-top: $header-height-lg;
+    margin-top: 0;
+    background: url('./assets/images/visual-background.jpg') no-repeat center
+      57%;
+
+    &-txt {
+      margin-top: -1em;
+      font-size: 96px;
+
+      strong span {
+        font-size: 100px;
+      }
+    }
+
+    &-date {
+      font-size: 18px;
     }
   }
 }

@@ -1,0 +1,92 @@
+.about-me {
+  padding-top: 40px;
+
+  .section-title {
+    margin-bottom: 20px;
+  }
+
+  img {
+    width: 60%;
+    max-width: 200px;
+    margin: 0 auto 15px auto;
+  }
+
+  .my-infor {
+    &-intro {
+      margin-bottom: 10px;
+      text-align: center;
+
+      strong {
+        font-weight: 500;
+        color: $primary;
+      }
+    }
+
+    &-list {
+      font-size: 14px;
+      text-align: center;
+
+      li {
+        @include flex;
+        margin-bottom: 3px;
+        color: $font-para;
+
+        &:before {
+          position: relative;
+          top: -1px;
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+          margin-right: 4px;
+          background: url('./assets/images/check.png') no-repeat center;
+          background-size: contain;
+          content: '';
+        }
+      }
+    }
+  }
+
+  .banner {
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    // background-color: #000;
+
+    p {
+      font-size: 9vw;
+      color: #fff;
+      text-align: right;
+      text-shadow: -1px -1px 0 #b2c4d6, 1px -1px 0 #b2c4d6, -1px 1px 0 #b2c4d6,
+        1px 1px 0 #b2c4d6;
+      white-space: nowrap;
+      transform: translateX(10%);
+      transition: transform 1000ms ease-in-out;
+    }
+  }
+
+  @media screen and (min-width: $md-breakpoint) {
+    img {
+      max-width: 300px;
+    }
+
+    .my-infor {
+      &-intro {
+        font-size: 20px;
+      }
+
+      &-list {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media screen and (min-width: $lg-breakpoint) {
+    .section-title {
+      text-align: left;
+    }
+
+    .banner p {
+      font-size: 70px;
+    }
+  }
+}

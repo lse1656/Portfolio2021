@@ -1,5 +1,7 @@
 .skill {
-  padding: 30px 0 40px;
+  width: 100%;
+  padding: 60px 0 40px;
+  overflow: hidden;
   background-color: $background-light;
 
   .section-title {
@@ -9,8 +11,9 @@
   &-item {
     @include flex(space-between, flex-start);
     padding: 13px 15px 13px 20px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     background-color: #fff;
+    border-radius: 4px;
 
     h4 {
       position: relative;
@@ -19,7 +22,7 @@
 
       &::after {
         position: absolute;
-        bottom: 0;
+        bottom: 1px;
         left: 0;
         z-index: -10;
         width: 100%;
@@ -33,6 +36,89 @@
       width: 65%;
       font-size: 13px;
       color: $font-para;
+      word-break: keep-all;
+    }
+  }
+
+  @media screen and (min-width: 425px) {
+    &-item {
+      flex-direction: column;
+      padding: 25px 40px;
+
+      h4 {
+        margin-bottom: 10px;
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (min-width: $md-breakpoint) {
+    background-color: #fff;
+
+    &-wrapper {
+      @include flex(space-between, flex-start);
+    }
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 70%;
+    }
+
+    &-item {
+      justify-content: flex-start;
+      width: 47%;
+      padding: 0;
+      margin-bottom: 60px;
+
+      h4 {
+        position: relative;
+        padding-top: 80px;
+        font-size: 16px;
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 70px;
+          height: 70px;
+          background-color: #000;
+          border-radius: 50%;
+          content: '';
+        }
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      &:first-child h4::before {
+        background: #000 url('./assets/images/html.png') no-repeat center 63%;
+      }
+
+      &:nth-child(2) h4::before {
+        background: #000 url('./assets/images/css.png') no-repeat center 63%;
+      }
+
+      &:nth-child(3) h4::before {
+        background: #000 url('./assets/images/javascript.png') no-repeat center;
+      }
+
+      &:last-child h4::before {
+        background: #000 url('./assets/images/sass.png') no-repeat 60% center;
+      }
+    }
+  }
+
+  @media screen and (min-width: $lg-breakpoint) {
+    padding-top: 80px;
+
+    &-item {
+      margin-bottom: 100px;
     }
   }
 }
