@@ -1,0 +1,36 @@
+.sidebar {
+  @include flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 50;
+  width: 80vw;
+  height: 100vh;
+  background-color: #fff;
+  opacity: 0;
+  transform: translateX(80vw);
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+
+  .snb-list {
+    li {
+      margin-bottom: 7px;
+    }
+
+    a {
+      display: inline-block;
+      width: 100%;
+      padding: 3px;
+      font-size: 21px;
+    }
+  }
+
+  &.active {
+    display: flex;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 300px;
+  }
+}
