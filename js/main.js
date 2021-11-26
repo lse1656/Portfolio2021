@@ -1,3 +1,4 @@
+//window load 후 visual section 글자 나타나기
 const visualTxt1 = document.querySelector('.visual-txt strong');
 const visualTxt2 = document.querySelector('.visual-txt em');
 
@@ -38,7 +39,7 @@ overlay.addEventListener('click', () => {
   removeClass();
 });
 
-//scroll event
+//scroll event: skill, project
 const skillItem = document.querySelectorAll('.skill-item');
 const projectImg = document.querySelectorAll('.project-item .project-img');
 const projectInfor = document.querySelectorAll('.project-item .project-infor');
@@ -62,6 +63,7 @@ window.addEventListener('scroll', () => {
   showValue(projectImg);
 });
 
+//scroll event: banner
 const bannerTxt = document.querySelector('.banner p');
 
 window.addEventListener('scroll', () => {
@@ -89,6 +91,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
+//project-detail팝업창 열기
 const detailBtn = document.querySelectorAll('.project-item .detail-button');
 const detailPopup = document.querySelectorAll('.popup');
 const detailCloseBtn = document.querySelectorAll('.popup .close-button');
