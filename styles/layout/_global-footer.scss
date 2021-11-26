@@ -1,0 +1,19 @@
+.global-footer {
+  background-color: $background-dark;
+
+  &-wrapper {
+    @include flex;
+    padding: 20px 0;
+  }
+
+  .copyright {
+    font-size: 9px;
+    color: $font-para;
+  }
+
+  @media screen and (min-width: $lg-breakpoint) {
+    .copyright {
+      font-size: 12px;
+    }
+  }
+}

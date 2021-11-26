@@ -1,9 +1,15 @@
 .global-header {
-  background-color: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
 
   &-wrapper {
     @include flex(space-between);
+    position: relative;
     height: 50px;
   }
 
@@ -15,36 +21,48 @@
     }
   }
 
-  .menu {
-    @include flex;
-    width: 25px;
-    height: 25px;
+  .gnb {
+    .gnb-list {
+      @include inline-flex;
+    }
 
-    &-wrap {
-      position: relative;
-      width: 20px;
-      height: 14px;
+    .gnb-item {
+      margin-right: 20px;
 
-      span {
-        position: absolute;
-        left: 0;
-        display: inline-block;
-        width: 18px;
-        height: 2px;
-        background-color: $font-base;
+      a {
+        position: relative;
 
-        &:first {
-          top: 0;
+        &::after {
+          @include center-y;
+          left: 0;
+          z-index: -10;
+          width: 100%;
+          height: 2px;
+          background-color: $primary;
+          content: '';
+          transform: scaleX(0);
+          transition: transform 300ms ease-in-out;
         }
 
-        &:nth-child(2) {
-          top: 50%;
-        }
-
-        &:last-child {
-          top: 100%;
+        &:hover::after {
+          transform: scaleX(1);
+          transform-origin: 0% 50%;
         }
       }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media screen and (min-width: $lg-breakpoint) {
+    &-wrapper {
+      height: 80px;
+    }
+
+    .logo {
+      width: 80px;
     }
   }
 }
